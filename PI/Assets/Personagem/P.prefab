@@ -31,8 +31,6 @@ GameObject:
   - 65: {fileID: 6591342}
   - 23: {fileID: 2391342}
   - 54: {fileID: 5491342}
-  - 114: {fileID: 11491344}
-  - 114: {fileID: 11491342}
   - 111: {fileID: 11150388}
   m_Layer: 0
   m_Name: P
@@ -181,37 +179,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11491342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82f45218de7248c4bb43732ceb99c3d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Angulo: 30
-  Velocidade: 10
-  Atual: {fileID: 491344}
---- !u!114 &11491344
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8983de954cb992240b35ad703475b2b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ComandoCamY: 0
-  VelocidadeCamera: 50
-  VelocidadeCameraLateral: 0
-  MovimentoVertical: 0
-  Angulo: 30
-  CameraPersonagem: {fileID: 491342}
 --- !u!124 &12491342
 Behaviour:
   m_ObjectHideFlags: 1

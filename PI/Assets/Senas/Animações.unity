@@ -133,7 +133,7 @@ RectTransform:
   m_Children:
   - {fileID: 1193643780}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -564,8 +564,8 @@ Transform:
   m_LocalPosition: {x: .680000007, y: -.400000006, z: -2.18000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1616365321}
+  m_RootOrder: 0
 --- !u!114 &395548601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Atual: {fileID: 1616365320}
-  Velocidade: 5
+  Velocidade: 20
   MovHorizontal: 0
   MovVertical: -2.26999998
   Suavidade: 1
@@ -833,7 +833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &528957315
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +946,7 @@ Transform:
   - {fileID: 657578361}
   - {fileID: 230213908}
   m_Father: {fileID: 1616365321}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!95 &570100234
 Animator:
   serializedVersion: 3
@@ -1459,7 +1459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1079066933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1193643777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1740,7 @@ Transform:
   m_LocalScale: {x: 30.7222843, y: 30.7222843, z: 30.7222843}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!65 &1210163038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2012,6 +2012,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 395548600}
   - {fileID: 570100232}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2028,7 +2029,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &1616365323
 BoxCollider:

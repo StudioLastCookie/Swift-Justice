@@ -16,6 +16,8 @@ public class MovePersonagem : MonoBehaviour {
 	IComando _Lado;
 	public Transform Atual;
 
+	Vector3 direcao;
+
 	void Start () 
 	{	
 //		Atual.renderer.material.color = Color.blue;
@@ -26,15 +28,21 @@ public class MovePersonagem : MonoBehaviour {
 	//	Debug.Log ("Clikou");
 	}
 
+	void FixedUpdate() {
+		if (direcao != Vector3.zero) {
+			rigidbody.AddForce(direcao.normalized * Velocidade * Time.fixedDeltaTime, ForceMode.VelocityChange); 
+		}
+	}
+
 	// Update is called once per frame
 	void Update () 
 	{
-
 		float Vetical = Input.GetAxis ("Vertical");
 		float Horizontal = Input.GetAxis ("Horizontal");
+		float RotMouseY = Input.GetAxis ("");
+		direcao = new Vector3 (Horizontal, 0, Vetical);
 
-
-
+		/*
 		if( Vetical != 0 )
 		{
 			_Frente = new Mover (Atual,Direcao.Norte,Velocidade,Vetical,ref historico);
@@ -50,7 +58,7 @@ public class MovePersonagem : MonoBehaviour {
 		{
 			Vetical-= Horizontal;
 			Horizontal-=Vetical;
-		}
+		}*/
 	//	print (historico.Count);
 	}
 }
