@@ -4,15 +4,39 @@ using System.Collections;
 public class PosicaoCamera : MonoBehaviour 
 {
 	public GameObject Atual;
+	public float Velocidade;
+	public float MovHorizontal;
+	public float MovVertical;
+	public float Suavidade;
 	private Vector3 Deslocamento;
-	
+
+
 	void Start ()
 	{
-		Deslocamento = transform.position;
+		Deslocamento = Atual.transform.position - transform.position;
 	}
 
 	void Update ()
 	{
-	//	transform.position = Atual.transform.position + Deslocamento;
+		MovHorizontal = Input.GetAxis ("Mouse Y") * Time.deltaTime;
+		MovVertical = Input.GetAxis ("Mouse X") * Time.deltaTime;
+	}
+
+	void LateUpdate()
+	{
+		float Corrente = transform.eulerAngles.y;
+		float AnguloDesejado = Atual.transform.eulerAngles.y;
+		float Anglo = Mathf.LerpAngle (Corrente,AnguloDesejado,0);
+
+		Vector3 RotacaoCamera = Vector3.Lerp (transform.forward, Deslocamento, Time.deltaTime * Suavidade);
+		transform.forward = RotacaoCamera;
+
+		Quaternion rotacao = Quaternion.Euler (0,Anglo,0);
+
+		transform.position = Atual.transform.position - (rotacao * Deslocamento);
+
+		transform.eulerAngles += new Vector3 (-MovHorizontal * Velocidade ,0,0);
+
+
 	}
 }

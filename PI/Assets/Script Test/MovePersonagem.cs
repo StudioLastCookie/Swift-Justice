@@ -17,7 +17,7 @@ public class MovePersonagem : MonoBehaviour {
 	public Transform Atual;
 
 	void Start () 
-	{
+	{	
 //		Atual.renderer.material.color = Color.blue;
 	}
 
@@ -33,8 +33,9 @@ public class MovePersonagem : MonoBehaviour {
 		float Vetical = Input.GetAxis ("Vertical");
 		float Horizontal = Input.GetAxis ("Horizontal");
 
+
+
 		if( Vetical != 0 )
-		
 		{
 			_Frente = new Mover (Atual,Direcao.Norte,Velocidade,Vetical,ref historico);
 			_Frente.Executar(false);

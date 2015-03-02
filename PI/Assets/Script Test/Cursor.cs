@@ -28,25 +28,26 @@ public class Cursor : MonoBehaviour
 
 		VelocidadeCameraLateral = Input.GetAxis ("Mouse Y") * VelocidadeCameraLateral * Time.deltaTime;
 		VelocidadeCamera = Input.GetAxis ("Mouse X") * VelocidadeCamera * Time.deltaTime;
-
-	
+		float test = Mathf.Clamp (VelocidadeCameraLateral,-15f,15f);
+		Debug.Log (test);
 		transform.Rotate(0,VelocidadeCamera,0);
-		//CameraPersonagem.transform.eulerAngles.x = Mathf.Clamp (360f,0f,0f);
+		CameraPersonagem.transform.eulerAngles = new Vector3 (test,0,0);
 
 		//CameraPersonagem.transform.Rotate (-VelocidadeCameraLateral, 0, 0);
 
-		CameraPersonagem.transform.Rotate(-VelocidadeCameraLateral,0,0);
-		if (CameraPersonagem.transform.eulerAngles.x <350f || CameraPersonagem.transform.eulerAngles.x >10f) 
-		{
-		//	CameraPersonagem.transform.eulerAngles -= new Vector3 (ComandoCamY * Time.deltaTime, 0, 0);
-		}
-	
+	//	if (CameraPersonagem.transform.eulerAngles.x > 15) {
+	//		{
+	//			CameraPersonagem.transform.rotation
+	//		}
+	//	else
+		//	{
+		//CameraPersonagem.transform.Rotate (-VelocidadeCameraLateral,0,0);
+		//	}
 		//distancia em que o raio ira colidir e quando colidir. 
 		if(Physics.Raycast(raio,out colisor,1000))
 		{
 		//	colisor.transform.renderer.material.color = new Color(Random.Range(0f,256f),50f,60f);
 		}
-
 	}
 }
 	

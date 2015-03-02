@@ -56,10 +56,10 @@ public class Mover: IComando
 		switch (direcao)
 		{
 		case Direcao.Norte:
-			objeto.Translate (Vector3.forward.normalized * Velocidade * Time.deltaTime * Angulo);
+			objeto.Translate (objeto.forward.normalized * Velocidade * Time.deltaTime * Angulo);
 			break;
 		case Direcao.Leste:
-			objeto.Translate (Vector3.right.normalized * Velocidade * Time.deltaTime * Angulo);
+			objeto.Translate (objeto.right.normalized * Velocidade * Time.deltaTime * Angulo);
 			break;
 		}
 	}	
